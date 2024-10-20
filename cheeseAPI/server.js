@@ -23,8 +23,8 @@ app.get('/cheeses', (req, res) => {
 });
 
 app.post('/cheeses', (req, res) => {
-    const { name, picture, color, price } = req.body;
-    const newCheese = { id: cheeses.length + 1, name, picture, color, price };
+    const { name, picture, color, price_per_kilo } = req.body;
+    const newCheese = { id: cheeses.length + 1, name, picture, color, price_per_kilo };
     cheeses.push(newCheese);
     res.status(201).json(newCheese);
 });
@@ -39,11 +39,11 @@ app.put('/cheeses/:id', (req, res) => {
     const cheese = cheeses.find(c => c.id === parseInt(req.params.id));
     if (!cheese) return res.status(404).json({ message: 'Cheese not found' });
 
-    const { name, picture, color, price } = req.body;
+    const { name, picture, color, price_per_kilo } = req.body;
     cheese.name = name || cheese.name;
     cheese.picture = picture || cheese.picture;
     cheese.color = color || cheese.color;
-    cheese.price = price || cheese.price;
+    cheese.price_per_kilo = price_per_kilo || cheese.price_per_kilo;
 
     res.json(cheese);
 });

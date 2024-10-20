@@ -28,21 +28,21 @@ paths:
                 - name
                 - picture
                 - color
-                - price
+                - price per kilogram
               properties:
                 name:
                   type: string
                   example: "Cheddar"
                 picture:
                   type: string
-                  example: "http://example.com/cheddar.jpg"
+                  example: "https://www.cheese.com/media/img/cheese/cheddar_large.jpg"
                 color:
                   type: string
                   example: "Yellow"
-                price:
+                price_per_kilo:
                   type: number
                   format: float
-                  example: 5.99
+                  example: 27.60
       responses:
         '201':
           description: Cheese created
@@ -84,21 +84,21 @@ paths:
                 - name
                 - picture
                 - color
-                - price
+                - price per kilogram
               properties:
                 name:
                   type: string
-                  example: "Aged Cheddar"
+                  example: "Brie"
                 picture:
                   type: string
-                  example: "http://example.com/aged-cheddar.jpg"
+                  example: "https://www.cheese.com/media/img/cheese-suggestion/Briefermier.jpg"
                 color:
                   type: string
-                  example: "Dark Yellow"
-                price:
+                  example: "Cream"
+                price_per_kilo:
                   type: number
                   format: float
-                  example: 6.99
+                  example: 36.00
       responses:
         '200':
           description: Cheese updated
