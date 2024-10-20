@@ -1,0 +1,34 @@
+{
+  "name": "Brie",
+  "picture": "https://www.cheese.com/media/img/cheese-suggestion/Briefermier.jpg",
+  "colour": "Cream",
+  "price_per_kilo": 36.00
+}
+
+{
+  "name": "Cheddar",
+  "picture": "https://www.cheese.com/media/img/cheese/cheddar_large.jpg",
+  "colour": "Yellow",
+  "price_per_kilo": 27.60
+}
+
+{
+  "name": "Camembert",
+  "picture": "https://www.cheese.com/media/img/cheese-suggestion/CamembertStLoup_800x.jpg",
+  "colour": "Pale Yellow",
+  "price_per_kilo": 27.50
+}
+
+{
+  "name": "Gouda",
+  "picture": "https://www.cheese.com/media/img/cheese-suggestion/Old_Gouda_-_48_Month.jpg",
+  "colour": "Yellow",
+  "price_per_kilo": 36.11
+}
+
+{
+  "name": "Parmesan Cheese",
+  "picture": "https://www.cheese.com/media/img/cheese/parmesan_on_wooden_surface.jpg",
+  "colour": "Straw",
+  "price_per_kilo": 32.50
+}
