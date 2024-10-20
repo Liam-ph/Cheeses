@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import './Cheese.css'; // Import the CSS file for styles
+import './Cheese.css';
 
 function Cheese() {
     const [cheeses, setCheeses] = useState([]);
     const [error, setError] = useState(null);
 
     async function fetchCheeses() {
-        const apiUrl = 'http://localhost:3000/cheeses'; // Fetch all cheeses
+        const apiUrl = 'http://localhost:3000/cheeses'; // Fetch all cheeses from API
 
         try {
             const response = await fetch(apiUrl);
@@ -32,6 +32,7 @@ function Cheese() {
         return <p>Error: {error}</p>;
     }
 
+    // HTML for rendering cheese data
     return (
         <div className="cheese-container">
             {cheeses.map(cheese => (
@@ -43,7 +44,7 @@ function Cheese() {
                         <img
                             src={cheese.picture}
                             alt={cheese.name}
-                            className="cheese-image" // Add class for styling
+                            className="cheese-image" 
                         />
                     )}
                 </div>
