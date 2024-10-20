@@ -12,7 +12,7 @@
     border-radius: 5px; /* Optional: rounded corners */
     padding: 10px; /* Optional: padding around content */
     text-align: center; /* Center text */
-    flex: 0 1 calc(33.333% - 20px); /* Adjust item width (3 items per row) */
+    flex: 0 1 calc(33.333% - 40px); /* Adjust item width (3 items per row) */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
 }
 
