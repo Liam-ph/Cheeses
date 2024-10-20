@@ -27,7 +27,7 @@ paths:
               required:
                 - name
                 - picture
-                - color
+                - colour
                 - price per kilogram
               properties:
                 name:
@@ -36,7 +36,7 @@ paths:
                 picture:
                   type: string
                   example: "https://www.cheese.com/media/img/cheese/cheddar_large.jpg"
-                color:
+                colour:
                   type: string
                   example: "Yellow"
                 price_per_kilo:
@@ -83,7 +83,7 @@ paths:
               required:
                 - name
                 - picture
-                - color
+                - colour
                 - price per kilogram
               properties:
                 name:
@@ -92,13 +92,13 @@ paths:
                 picture:
                   type: string
                   example: "https://www.cheese.com/media/img/cheese-suggestion/Briefermier.jpg"
-                color:
+                colour:
                   type: string
                   example: "Cream"
                 price_per_kilo:
                   type: number
                   format: float
-                  example: 36.00
+                  example: 53.00
       responses:
         '200':
           description: Cheese updated

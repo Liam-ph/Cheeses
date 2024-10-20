@@ -1,0 +1,22 @@
+.cheese-container {
+    display: flex;
+    flex-direction: row; /* Align items in a row */
+    flex-wrap: wrap; /* Allow wrapping to the next line if necessary */
+    justify-content: flex-start; /* Align items to the start */
+    gap: 20px; /* Space between items */
+}
+
+.cheese-item {
+    background: #1e1e1e; /* Optional: add background color */
+    border: 1px solid #ccc; /* Optional: add border */
+    border-radius: 5px; /* Optional: rounded corners */
+    padding: 10px; /* Optional: padding around content */
+    text-align: center; /* Center text */
+    flex: 0 1 calc(33.333% - 20px); /* Adjust item width (3 items per row) */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
+}
+
+.cheese-image {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
