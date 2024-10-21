@@ -3,7 +3,7 @@ import './Header.css';
 function Header() {
   return (
     <header >
-      <h1>Cheese-o-Pedia</h1>
+      <h1><img src='/src/assets/cheese1.png' alt="Cheese Logo" className="cheese-logo" />Cheese-o-Pedia</h1>
       <nav>
         <ul>
             <li><a href="#">Home</a></li>

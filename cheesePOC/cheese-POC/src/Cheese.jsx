@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Cheese.css';
 
 function Cheese() {
@@ -37,7 +38,9 @@ function Cheese() {
         <div className="cheese-container">
             {cheeses.map(cheese => (
                 <div className="cheese-item" key={cheese.id}>
-                    <h2>{cheese.name}</h2>
+                    <h2>
+                        <Link to={`/cheeses/${cheese.id}`}>{cheese.name}</Link>
+                    </h2>
                     <p>Colour: {cheese.colour}</p>
                     <p>Price Per Kilogram: ${cheese.price_per_kilo}</p>
                     {cheese.picture && (
