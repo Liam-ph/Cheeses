@@ -56,8 +56,13 @@ app.delete('/cheeses/:id', (req, res) => {
     res.status(204).send();
 });
 
-// Start the server
-app.listen(port, () => {
-    console.log(`API server is running at http://localhost:${port}`);
-    console.log(`Swagger UI is available at http://localhost:${port}/api-docs`);
-});
+// Function to start the server
+const startServer = () => {
+    app.listen(port, () => {
+        console.log(`API server is running at http://localhost:${port}`);
+        console.log(`Swagger UI is available at http://localhost:${port}/api-docs`);
+    });
+};
+
+// Export the app and the start function
+module.exports = { app, startServer };
