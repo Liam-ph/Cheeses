@@ -1,9 +1,11 @@
 import './Header.css';
+import cheeseLogo from '/public/cheese1.png'; // Adjust the path as needed
+
 
 function Header() {
   return (
     <header >
-      <h1><img src='/src/assets/cheese1.png' alt="Cheese Logo" className="cheese-logo" />Cheese-o-Pedia</h1>
+      <h1><img src={cheeseLogo} alt="Cheese Logo" className="cheese-logo" />Cheese-o-Pedia</h1>
       <nav>
         <ul>
             <li><a href="#">Home</a></li>
