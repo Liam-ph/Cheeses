@@ -6,6 +6,8 @@ function CheeseDetail() {
     const { cheeseId } = useParams();
     const [cheese, setCheese] = useState(null);
     const [error, setError] = useState(null);
+    const [kilograms, setKilograms] = useState(0);
+    const [totalPrice, setTotalPrice] = useState(0);
 
     useEffect(() => {
         async function fetchCheese() {
@@ -29,6 +31,15 @@ function CheeseDetail() {
 
         fetchCheese();
     }, [cheeseId]);
+
+    const handleKilogramsChange = (event) => {
+        const newKilograms = event.target.value;
+        setKilograms(newKilograms);
+        if (cheese) {
+            setTotalPrice(newKilograms * cheese.price_per_kilo);
+        }
+    };
+
     if (error) {
         return <p>Error: {error}</p>;
     }
@@ -40,7 +51,21 @@ function CheeseDetail() {
         <div className="cheese-detail">
             <h2>{cheese.name}</h2>
             <p>Colour: {cheese.colour}</p>
-            <p>Price Per Kilogram: ${cheese.price_per_kilo}</p>
+            <p>Price Per Kilogram: ${cheese.price_per_kilo.toFixed(2)}</p>
+            <div className='price-calculator'>
+                <h3>Price Calculator</h3>
+                <label htmlFor="kilograms">Kilograms: </label>
+                <input
+                    type="number"
+                    min="0"
+                    id="kilograms"
+                    name="kilograms"
+                    value={kilograms}
+                    onChange={handleKilogramsChange}
+                    placeholder="Enter kgs"
+                />
+                <p>Total Price: ${totalPrice.toFixed(2)}</p>
+            </div>
             {cheese.picture && (
                 <img
                     src={cheese.picture}
