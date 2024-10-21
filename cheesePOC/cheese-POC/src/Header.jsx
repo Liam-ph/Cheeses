@@ -1,7 +1,8 @@
+import './Header.css';
 
 function Header() {
   return (
-    <header>
+    <header >
       <h1>Cheese-o-Pedia</h1>
       <nav>
         <ul>

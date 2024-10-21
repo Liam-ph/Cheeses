@@ -1,0 +1,17 @@
+/* Styling for ul */
+nav ul {
+    list-style-type: none; 
+    padding: 0;           
+    margin: 0;            
+    display: flex;        
+  }
+  
+  /* Add margins between list items */
+  nav ul li {
+    margin-right: 20px;   
+  }
+  
+  /* remove margin for last item */
+  nav ul li:last-child {
+    margin-right: 0;     
+  }
