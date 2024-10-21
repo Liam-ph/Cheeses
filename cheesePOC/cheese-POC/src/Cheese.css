@@ -14,12 +14,12 @@
     border-radius: 5px; 
     padding: 10px; 
     text-align: center; 
-    flex: 0 1 calc(33.333% - 40px); /* Adjust item width (3 items per row) */
+    flex: 0 1 calc(33.333% - 40px); /* (3 items per row) */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 /* Cheese images */
 .cheese-image {
-    max-width: 100%; /* Ensure the image is responsive */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; 
+    height: auto; 
 }

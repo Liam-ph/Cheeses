@@ -1,5 +1,5 @@
 import './Header.css';
-import cheeseLogo from '/public/cheese1.png'; // Adjust the path as needed
+import cheeseLogo from '/public/cheese1.png'; 
 
 
 function Header() {
