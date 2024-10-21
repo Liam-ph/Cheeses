@@ -7,7 +7,6 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "serve -s dist",
-    "test": "jest",
     "lint": "eslint .",
     "preview": "vite preview"
   },
