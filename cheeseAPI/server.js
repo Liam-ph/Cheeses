@@ -14,8 +14,13 @@ app.use(cors());
 let cheeses = [];
 
 // Load Swagger documentation from YAML file
-const swaggerDocument = YAML.load('./swagger.yaml');
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+let swaggerDocument;
+try {
+    swaggerDocument = YAML.load('./swagger.yaml');
+    app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+} catch (error) {
+    console.error('Failed to load Swagger documentation:', error.message);
+}
 
 // CRUD operations
 app.get('/cheeses', (req, res) => {
@@ -63,6 +68,11 @@ const startServer = () => {
         console.log(`Swagger UI is available at http://localhost:${port}/api-docs`);
     });
 };
+
+// Start the server
+if (require.main === module) {
+    startServer();
+}
 
 // Export the app and the start function
 module.exports = { app, startServer };
